@@ -12,14 +12,19 @@
 
 class Tries {
 private:
-    std::shared_ptr<Node> root;
-    std::shared_ptr<Node> findEndOfWord(const std::string& word) const;
-    void preOrder(const std::shared_ptr<Node>& node, std::list<int>& results, int& visitedNodes, int maxResults) const;
+    Node* root;
+    Node* findEndOfWord(const std::string& word) const;
+    void preOrder(const Node* node, std::list<int>& results, int& visitedNodes, int maxResults) const;
+    void printNodeRecursive(const Node* node, const std::string& prefix) const;
+
 public:
     Tries();
     ~Tries();
     void insert(std::string word, int index);
     std::list<int> search(const std::string &word);
+    void printTrie() const;
+    void deleteWord(const std::string &word);
+
 };
 
 
