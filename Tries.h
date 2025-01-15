@@ -24,6 +24,7 @@ public:
     std::list<int> search(const std::string &word);
     void printTrie() const;
     void deleteWord(const std::string &word);
+
 };
 
 

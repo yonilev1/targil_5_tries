@@ -39,6 +39,7 @@ Node* Tries::findEndOfWord(const std::string& word) const {
 // Pre-order traversal of the Trie. The function visits each node and collects the indexes of strings
 // that end at that node. It stops when the desired number of results (maxResults) is collected.
 void Tries::preOrder(const Node* node, std::list<int>& results, int& visitedNodes, int maxResults) const {
+
     if(!node || results.size() >= maxResults) {
         return;
     }
